@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #3</title>
+</head>
+<style>
+    body{
+        background:#fff88f;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap ;
+        text-align: center;
+        justify-content: center;
+
+        
+    }
+
+    form {
+        border: 1px solid black;
+        padding: 1rem;
+        border-radius: 60px;
+        background-color: #fff;
+      
+    }
+
+</style>
+
+<body>
+    <header>
+        <h1>Registration form </h1>
+    </header>
+    
+    <div>
+        <form>
+            <h2>Sign up </h2>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required placeholder="alice nart ali ">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" min="1" max="200" step="5">
+            </div>
+            <div>
+                <label for="date">Birthdate:</label>
+                <input type="date" name="date" id="date" min="2019-06-10">
+            </div>
+            <hr>
+            <div>
+                Favorite Food:
+                <div>
+                    <label for="mansaf">Mansaf</label>
+                    <input type="checkbox" name="mansaf" id="mansaf">
+                </div>
+                <div>
+                    <label for="Pasta">Pasta</label>
+                    <input type="checkbox" name="pasta" id="pasta">
+                </div>
+            </div>
+            <hr>
+            <div>
+                Gender:
+                <div>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                </div>
+                <div>
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                </div>
+            </div>
+            <hr>
+    
+            <div>
+                <label for="actor ">From your point of view who is the best actor from these options : </label>
+                <select name="cars" id="cars">
+                   <option value="Ewan McGregor">Ewan McGregor</option>
+                   <option value="Leonardo DiCaprio">Leonardo DiCaprio</option>
+                   <option value="Samuel L. Jackson">Samuel L. Jackson</option>
+               </select>
+            </div>
+            <input type="hidden" name="hidden" value="hi">
+            <div>
+                <label for="file">File</label>
+                <input id="file" type="file" name="file">
+            </div>
+            <div>
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone">
+            </div>
+            <div>
+                <label for="url">URL</label>
+                <input type="url" name="url" id="url">
+            </div>
+            <div>
+                <label for="color">Color</label>
+                <input type="color" name="color" id="color">
+            </div>
+            <div>
+                <label>
+              Password
+              <input type="password" name="password" required>
+            </label>
+            </div>
+            <label for="commment">comment:</label> <br>
+            <textarea id="comment" name="comment" rows="4" cols="30">
+                
+            </textarea>
+            <br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+
+
+</body>
+
+</html>

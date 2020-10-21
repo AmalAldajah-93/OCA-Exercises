@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="myFunction()">
+    <div id="demo">
+    </div>
+
+
+    <script>
+        //the patterns 12/6/4/3/2/1
+        function myFunction() {
+            var arr = [1, 2, 3, 4, 6, 12];
+            var count = 0;
+
+            for (var i in arr) {
+                var j = 1;
+                while (j <= arr[i]) {
+                    count += 1;
+                    var node = document.createElement("DIV");
+                    node.setAttribute("id", 'a' + count)
+                    node.innerText = count;
+
+                    j++;
+                    document.getElementById("demo").appendChild(node);
+
+                }
+
+
+
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4-flex</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        #main {
+            background: #ffffba;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .cont {
+            border: 1px solid white;
+            padding: 1rem;
+            border-radius: 4rem;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 25rem;
+            background-color: #ffffff;
+        }
+        
+        .cont>div {
+            background-color: #ffffff;
+        }
+        
+        .cont div {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        
+        div p {
+            position: relative;
+            bottom: 0px;
+            left: 0px;
+        }
+        
+        .cont div img {
+            width: 100px;
+        }
+        
+        .cont div div {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="cont">
+            <div>
+                <img src="https://library.kissclipart.com/20180925/krq/kissclipart-logo-login-png-clipart-login-clip-art-03c0b94716052faf.png " alt="user">
+                <div>
+                    <h3> User#1
+                        </h2>
+                        <p>Amman,Jordan</p>
+                </div>
+
+            </div>
+            <hr>
+            <div>
+                <img src="https://library.kissclipart.com/20180925/krq/kissclipart-logo-login-png-clipart-login-clip-art-03c0b94716052faf.png " alt="user">
+                <div>
+                    <h3> User#2</h2>
+                        <p>Salt,Jordan</p>
+
+                </div>
+
+            </div>
+            <hr>
+            <div>
+                <img src="https://library.kissclipart.com/20180925/krq/kissclipart-logo-login-png-clipart-login-clip-art-03c0b94716052faf.png " alt="user">
+                <div>
+                    <h3>User#3</h2>
+                        <p>Zarqa,Jordan</p>
+
+                </div>
+
+            </div>
+            <hr>
+            <div>
+                <img src=https://library.kissclipart.com/20180925/krq/kissclipart-logo-login-png-clipart-login-clip-art-03c0b94716052faf.png " alt="user "><div> 
+                    <h3> User#4</h2>
+                    <p>Irbid,Jordan</p>
+
+                </div>
+
+               
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

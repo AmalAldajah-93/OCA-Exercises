@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //1st class
+        class Person {
+            constructor(id, name, age) {
+                this.id = id;
+                this.name = name;
+                this.age = age;
+            }
+
+            // Method
+            greeting() {
+                return 'Hi ' + this.name
+            }
+
+        }
+        const ali = new Person(1, 'Ali', 39);
+
+        ali.greeting(); //Hi Ali
+
+        //object #2
+        const alice = new Person(1, 'Alice', 32);
+
+        console.log(alice.age); //32
+
+
+        class Teacher extends Person {
+            constructor(height, wight) {
+                super(height, wight)
+
+            }
+        }
+
+
+        //object #3
+
+        const sobhi = new Teacher(1, 'Sobhi', 39);
+
+        sobhi.greeting(); //Hi Sobhi
+
+
+
+
+
+
+        //2nd class
+        class Car {
+            constructor(id, type, year) {
+                this.id = id;
+                this.type = type;
+                this.year = year;
+            }
+            start() {
+                return this.type + ' is running';
+            }
+
+        }
+
+        // object #4
+        const toyotaPrius = new Car(1, 'toyotaPrius', '2013');
+
+        toyotaPrius.start(); // toyotaPrius consumption is running
+
+        // //object #5
+
+        const kiaSpectra = new Car(2, 'kiaSpectra', '2012');
+
+        console.log(kiaSpectra.year); // 2012
+
+
+
+
+        //3rd  class
+
+        class Animal {
+            constructor(id, name, isPet) {
+                this.id = id;
+                this.name = name;
+                this.isPet = Boolean(isPet);
+
+            }
+            homeAnimal() {
+                return this.isPet;
+            }
+
+        }
+
+        //object #6
+
+        const cat = new Animal(1, 'cat', 'true');
+
+        cat.homeAnimal(); // true 
+
+
+        //object #7
+
+
+        const dog = new Animal(2, 'dog', 'true');
+
+        console.log(dog.id); //2 
+
+
+        //to print the argument with the constructor element 
+
+
+        objPrint = (obj) => Object.entries(obj).flat().forEach(a => console.log(a));
+
+        objPrint(cat);
+        objPrint(alice);
+        objPrint(kiaSpectra);
+
+        //to print the argument without the constructor element 
+
+        // objPrint2 = (obj) => Object.entries(obj).map(a => a.slice(1)).flat().forEach(a => console.log(a));
+        // objPrint2(cat);
+        // objPrint2(alice);
+        // objPrint2(kiaSpectra);
+    </script>
+
+</body>
+
+</html>

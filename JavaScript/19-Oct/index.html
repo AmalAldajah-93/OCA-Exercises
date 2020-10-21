@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>New Account </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        
+        body {
+            background-size: 100%;
+        }
+        
+        #main {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+        }
+        
+        #main>div {
+            border: solid 5px#363636;
+            margin: auto;
+        }
+        
+        #input-field {
+            padding: 1rem;
+            width: 28rem;
+            background-color: #363636;
+            color: cornsilk;
+            border-radius: 2rem;
+            display: flex;
+            flex-direction: column;
+            ;
+        }
+        
+        #input-field>div {
+            margin: 0.4rem;
+            text-align: left;
+        }
+        
+        .input-icons i {
+            position: absolute;
+        }
+        
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .icon {
+            padding: 10px;
+            color: green;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="main">
+
+        <div id="input-field">
+            <div style="text-align: center;">
+
+                <h2> Create an Account </h2>
+                <br>
+                <hr>
+            </div>
+
+            <div class="input-icons">
+                <i class="fa fa-user icon"> 
+              </i>
+                <input class="input-field" type="text" placeholder="Name">
+            </div>
+
+            <div class="input-icons">
+                <i class="fa fa-phone" style="font-size:24px; color:#008000; margin: 8px;"></i>
+                <input class="input-field" type="text" placeholder="Phone Number">
+            </div>
+
+
+
+            <div class="input-icons">
+                <i class="fa fa-envelope icon"> 
+              </i>
+                <input class="input-field" type="text" placeholder="Email">
+            </div>
+
+
+
+            <div class="input-icons">
+                <i class="fa fa-key icon"> 
+              </i>
+                <input class="input-field" type="password" placeholder="Password">
+            </div>
+
+
+
+            <div class="form-check" style="font-size:0.9rem;">
+                <input type="checkbox" onclick="onClickHandler()" onchange="onChangeHandler()"> I agree to The Terms and Conditions and Privacy Policy
+
+            </div>
+
+            <div>
+                <button onclick="sub();" type="button" id="submit" class="btn btn-primary" style="border-radius: 0.8rem; color: aliceblue;background-color: #999B2C; float: right; margin: 0.1rem;padding: 0.2rem;  width: 12rem; height: 3rem;  font-size: 1.4rem;">Create Account</button>
+
+            </div>
+
+
+
+        </div>
+
+
+        <!-- Name:                Mohammad Al-Shwaiki
+            Phone Number:           000-000-0000
+            Email:               name@email.com
+            password: *             dW1ww#3
+
+-->
+
+
+        <script>
+            function sub() {
+                var items = document.querySelectorAll('input');
+
+                var list = []; //name ,phone  /email /password /checkbox 
+
+                for (var i = 0; i < items.length; i++) {
+                    if (!(i == items.length - 1)) {
+                        let item = items[i].value;
+                        list.push(item.trim());
+                    } else {
+                        list.push(items[i].checked);
+                    }
+                }
+
+
+                //name
+                var name = /^Mohammad\s?Al\-?Shwaiki$/gi.test(list[0]);
+
+                //phone
+                var phone = /^\d{3}\-?\d{3}\-?\d{4}$/gi.test(list[1]);
+
+                //email
+                var email = /^[a-zA-Z]{2,9}\@[a-zA-Z]{2,9}[\d]?\.com$/gi.test(list[2]);
+
+                //  password
+                var password = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/g.test(list[3]);
+
+                var checkbox = list[4];
+                //
+
+                if ((name && phone && email && password && checkbox)) {
+                    document.getElementById("submit").style = "border-radius: 0.8rem; color: aliceblue;background-color: #999B2C; float: right; margin: 0.1rem;padding: 0.2rem;  width: 12rem; height: 3rem;  font-size: 1.4rem;"
+                    alert('Welcome  Mohammad Al-Shwaiki')
+
+                } else {
+                    document.getElementById("submit").style = "border-radius: 0.8rem; color: aliceblue;background-color: #999B2C; float: right; margin: 0.1rem;padding: 0.2rem;  width: 12rem; height: 3rem;  font-size: 1.4rem; cursor: not-allowed;pointer - events: none;color: #c0c0c0;background : #ffffff;";
+                }
+
+            }
+
+            // function onClickHandler() {
+            //     document.querySelectorAll("input")[4].value = true;
+            // } else {
+            //     document.querySelectorAll("input")[4].value = ;
+            // }
+
+
+            // Print both variables at the end of the program
+            //J Query and ui
+
+
+            localStorage.
+        </script>
+
+</body>
+
+</html>

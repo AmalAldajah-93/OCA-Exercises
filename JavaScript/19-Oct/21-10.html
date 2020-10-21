@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>101</title>
+</head>
+<h1> Java </h1>
+
+<body>
+    <script>
+        // triggers on updates made to the same storage 
+        localStorage.setItem('test1', 1);
+        localStorage.setItem('name', 'Ali');
+
+
+        // // Store an integer instead of a string
+        // localStorage.setItem('key 2', 2);
+
+
+
+
+        localStorage.setItem('key', {
+            id: 1,
+            name: 'value',
+            lastName: "value 2"
+
+        });
+
+        alert(typeof localStorage.getItem('key')); // string
+
+
+
+
+
+        // Store an object using JSON
+        localStorage.setItem('new', JSON.stringify({
+            id: "1",
+            name: 'value'
+        }));
+
+
+        alert(JSON.parse(localStorage.getItem('new')).name); // value
+
+        // function fun() {
+        //     document.getElementsByTagName("h1").innerHTML = localStorage.name;
+        // }
+        // fun();
+        localStorage.setItem('name 2', 'Ali');
+        // localStorage.setItem('name 2', 'adsfafdasd');
+    </script>
+</body>
+
+</html>

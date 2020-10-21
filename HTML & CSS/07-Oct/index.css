@@ -1,0 +1,142 @@
+body {
+  background: #fff;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#demo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+#demo div {
+  border: 4px solid white;
+  text-align: center;
+  height: 50px;
+  background: #FCD800;
+  color: white;
+}
+
+#a1 {
+  width: 100%;
+}
+
+#a2 {
+  width: calc(100%/2);
+}
+
+#a3 {
+  width: calc(100%/2);
+}
+
+#a4 {
+  width: calc(100%/3);
+}
+
+#a5 {
+  width: calc(100%/3);
+}
+
+#a6 {
+  width: calc(100%/3);
+}
+
+#a7 {
+  width: calc( 100%/4);
+}
+
+#a8 {
+  width: calc( 100%/4);
+}
+
+#a9 {
+  width: calc( 100%/4);
+}
+
+#a10 {
+  width: calc( 100%/4);
+}
+
+#a11 {
+  width: calc( 100%/6);
+}
+
+#a12 {
+  width: calc( 100%/6);
+}
+
+#a13 {
+  width: calc( 100%/6);
+}
+
+#a14 {
+  width: calc( 100%/6);
+}
+
+#a15 {
+  width: calc( 100%/6);
+}
+
+#a16 {
+  width: calc( 100%/6);
+}
+
+#a17 {
+  width: calc(100%/12);
+}
+
+#a18 {
+  width: calc(100%/12);
+}
+
+#a19 {
+  width: calc(100%/12);
+}
+
+#a20 {
+  width: calc(100%/12);
+}
+
+#a21 {
+  width: calc(100%/12);
+}
+
+#a22 {
+  width: calc(100%/12);
+}
+
+#a23 {
+  width: calc(100%/12);
+}
+
+#a24 {
+  width: calc(100%/12);
+}
+
+#a25 {
+  width: calc(100%/12);
+}
+
+#a26 {
+  width: calc(100%/12);
+}
+
+#a27 {
+  width: calc(100%/12);
+}
+
+#a28 {
+  width: calc(100%/12);
+}
+/*# sourceMappingURL=index.css.map */

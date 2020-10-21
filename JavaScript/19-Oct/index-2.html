@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //1st class
+        class Person {
+            constructor(height, wight) {
+                this.height = height;
+                this.wight = wight;
+            }
+
+            // Method
+            bim() {
+                return this.wight / (this.height) ** 2;
+            }
+
+        }
+        const ali = new Person(1.6, 50);
+
+        ali.bim(); // 19.5
+
+        //object #2
+        const alice = new Person(1.6, 60);
+
+        console.log(alice.wight); //60
+
+
+        class Athlete extends Person {
+
+            // Method
+            bim() {
+                super.bim();
+                return this.wight / (this.height) ** 2 + 2;
+            }
+
+
+        }
+        //object #3
+
+        const lara = new Athlete(1.8, 70);
+
+        lara.bim(); // 
+
+        //object #4
+
+        const lila = new Athlete(1.5, 50);
+
+        lila.bim(); // 
+
+
+
+
+
+        //2nd class
+        class Car {
+            constructor(name, fuelType, consumptionOfFuelPerMail) {
+                this.name = name;
+                this.fuel = fuelType;
+                this.cm = consumptionOfFuelPerMail;
+            }
+            consumptionOfFuelPerKm() {
+                return this.cm / 1.50;
+            }
+
+        }
+
+        //object #5
+        const toyotaPrius = new Car('Prius', 'gasLine', '60');
+
+        toyotaPrius.consumptionOfFuelPerKm(); // consumption Of Fuel Per Km =40
+
+        //object #6
+
+        const kiaSpectra = new Car('Spectra', 'gasLine', '70');
+
+        kiaSpectra.consumptionOfFuelPerKm(); // consumption Of Fuel Per Km =46.66
+
+
+
+
+        //3rd  class
+
+        class Animal {
+            constructor(name, species) {
+                this.name = name;
+                this.species = species;
+
+            }
+            eat() {
+                return `${this.name} is eating `;
+            }
+
+        }
+
+        //object #7
+
+        const cat = new Animal('cat', 'catus');
+
+        cat.eat(); // cat is eating 
+
+
+        //object #8
+
+
+        const dog = new Animal('dog', 'Canis');
+
+        console.log(dog.species); // Canis
+
+        //- a function to print object all attributes and use it on 3 different objects from different classes
+
+        //to print the argument with the constructor element 
+
+
+        objPrint = (obj) => Object.entries(obj).flat().forEach(a => console.log(a));
+
+        objPrint(cat);
+        objPrint(alice);
+        objPrint(kiaSpectra);
+
+        //to print the argument without the constructor element 
+
+        // objPrint = (obj) => Object.entries(obj).map(a => a.slice(1)).flat().forEach(a => console.log(a));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of odd and even num </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        
+        body {
+            background-image: url(https://i2.wp.com/abunawaf.com/wp-content/uploads/2015/05/%D8%B9%D8%B1%D8%A7%D9%81%D8%A9.jpg?fit=1024%2C768&ssl=1);
+            background-size: 100%;
+        }
+        
+        #main {
+            border: 10px solid rgb(154, 96, 207);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+        }
+        
+        #main>div {
+            border: double 5px rgb(107, 107, 252);
+            margin: auto;
+        }
+        
+        #input-field {
+            padding: 1rem;
+            width: 14rem;
+            background-color: blueviolet;
+            color: cornsilk;
+        }
+        
+        #sol {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="sol" style="padding: 30px 40px;">
+
+
+        </div>
+
+        <div id="input-field">
+
+            <label>Name</label>
+            <input type="text" placeholder="ex: Ahmad" class="a">
+            <br><br>
+
+            <label>Job</label>
+            <input type="text" placeholder="ex: Engineer " class="a">
+            <br><br>
+
+            <label>Country</label>
+            <input type="text" placeholder="ex: Jordan " class="a">
+            <br><br>
+
+
+            <label>Gender</label>
+            <select name="gender" id="gender" class="a">
+                <option value="male">
+                    Male
+                </option>
+                <option  value="female">
+                Female
+                </option>
+            </select>
+            <br><br>
+            <button onclick="sub();" type="button" class="btn btn-primary">submit</button>
+
+        </div>
+
+        <!-- <div id="btn" style="padding: 30px 40px;">
+
+            <button type="button" class="btn btn-primary"> calculate</button>
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            function sub() {
+                var list = document.querySelectorAll('.a');
+
+                var arr = []; //name ,job /country /gender 
+
+                var nums = list;
+
+                for (var i in nums) {
+                    var num = nums[i].value;
+                    arr.push(num);
+                }
+
+                var wifeNames = ['lara', 'yara', 'tamara', 'alaa'];
+
+                var hasbandNames = ['ahmad', 'samer', 'alaa', 'hashim', 'murad', 'sami'];
+
+                if (arr[3] == 'male') {
+
+                    var solution = `${arr[0]} will be a ${arr[1]} in ${arr[2]}, and married to ${wifeNames[Math.floor(Math.random()*wifeNames.length-1)]} with ${Math.floor(Math.random()*10)} kids.`;
+                } else {
+                    var solution = `${arr[0]} will be a ${arr[1]} in ${arr[2]}, and married to ${hasbandNames[Math.floor(Math.random()*hasbandNames.length-1)]} with ${Math.floor(Math.random()*10)} kids.`;
+
+                }
+
+
+
+                document.getElementById('sol').style = "display: block; padding:20px; font-size:24px; background:#FDD5FD ";
+
+                document.getElementById('sol').innerHTML = solution;
+
+            }
+
+            // Print both variables at the end of the program
+            //J Query and ui
+        </script>
+
+
+        <!-- <script>
+            function oddEvenSum() {
+
+                var arr = [];
+                var nums = document.querySelectorAll(".a");
+                for (var i in nums) {
+                    var num = nums[i].value;
+                    arr.push(parseInt(num));
+                }
+
+                var odd = 0;
+                var even = 0;
+                for (var i = 1; i <= arr.length; i++) {
+                    switch (arr[i] % 2) {
+                        case 1:
+                            odd += arr[i];
+                            break;
+                        case 0:
+                            even += arr[i];
+                    }
+                }
+                var solution = "oddSum =" + odd + '\n' + ", evenSum =" + even;
+                document.getElementById('sol').style = "display: block; padding:20px;";
+                document.getElementById('sol').innerHTML = solution;
+
+            }
+            // var a = 0;
+            // while (a < 10) {
+            //     document.querySelectorAll(".a")[a].addEventListener("keydown", oddEvenSum, true);
+            //     a++;
+            // }
+        </script> -->
+</body>
+
+</html>

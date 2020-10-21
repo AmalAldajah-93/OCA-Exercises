@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         // Create an empty array
+        // Use a loop to add the numbers from 1 to 10 to the array
+
+
+        function oddEvenSum() {
+
+            var arr = [];
+            for (var i = 1; i <= 10; i++) {
+                var num = prompt('Please inter the value NO.' + i);
+                arr.push(parseInt(num));
+            }
+
+            var odd = 0;
+            var even = 0;
+            for (var i = 1; i <= arr.length; i++) {
+                switch (arr[i] % 2) {
+                    case 1:
+                        odd += arr[i];
+                        break;
+                    case 0:
+                        even += arr[i];
+                }
+            }
+            return "oddSum =" + odd + ", evenSum =" + even;
+
+        }
+        oddEvenSum();
+
+
+
+        // Print both variables at the end of the program
+        //J Query and ui
+    </script>
+</body>
+
+</html>

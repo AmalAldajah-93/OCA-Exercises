@@ -1,0 +1,81 @@
+$image-Blastoise:'https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png';
+body {
+    background-image: url(https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F04%2Fpokemon-pikachu-video-chat-backgrounds-download-info-005.jpg?quality=95&w=1170&cbr=1&q=90&fit=max);
+    background-size: 100% 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    text-align: center;
+    grid-gap: 1rem;
+    & .a,
+    .b {
+        display: grid;
+        padding: 5rem;
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 30%;
+        grid-gap: 2rem;
+        ;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 2rem;
+        & .sub-img {
+            background-color: #F2F2F2;
+            margin: 0.2rem;
+            border-radius: 1rem;
+            padding: 1rem;
+            border-radius: 50%;
+            & img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        & .des {
+            font-size: 1rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #EADFC8;
+            padding: 0.3rem;
+            margin: auto;
+            border-radius: 1rem;
+        }
+        & .table {
+            padding: 0.3rem;
+            border: none;
+            margin: auto;
+            border-radius: 0.2rem;
+            text-align: center;
+            background-color: #B3D3DC;
+            grid-column: 1/3;
+            height: 100%;
+            width: 100%;
+            & td,
+            th {
+                margin: auto;
+                padding: 0.4rem;
+                height: 100%;
+                width: 100%;
+            }
+            & td:nth-child(even) {
+                background-color: #EED6B1;
+            }
+            & td:nth-child(odd) {
+                background-color: #78A1CD;
+            }
+            & th {
+                background-color: #B9A18B;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    #main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0.9rem;
+    }
+}
