@@ -97,3 +97,8 @@ function saveInSession() {
     }
 
 }
+
+function claerFunc() {
+    localStorage.clear();
+    sessionStorage.clear();
+}
